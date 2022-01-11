@@ -25,7 +25,9 @@
 $string['plugintitle'] = 'Grade Curricular CODE8734';
 
 $string['registerheading'] = 'Registrar usuário';
+$string['registerdescription'] = 'Registre um novo aluno da GC CODE8374 no AVA/CAF. Clique no botão abaixo e preencha o formulário.';
 
+$string['indexurl'] = '/local/gcplugin/index.php';
 $string['registerurl'] = '/local/gcplugin/register.php';
 
 $string['studentinfo'] = 'Informações do estudante';
