@@ -12,7 +12,7 @@
                 <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
             </KEYS>
         </TABLE>
-        <TABLE NAME="gcplugin_student">
+        <TABLE NAME="gcplugin_student" COMMENT="informações de um aluno da GC CODE8734">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
                 <FIELD NAME="studentname" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Nome completo"/>
@@ -20,30 +20,30 @@
                 <FIELD NAME="studentemail" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="E-mail pessoal do usuário"/>
                 <FIELD NAME="studentphonenumber" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Número de telefone para contato"/>
                 <FIELD NAME="cnpj" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="CNPJ da escola parceira"/>
-                <FIELD NAME="studentbirthdate" TYPE="date" NOTNULL="true" SEQUENCE="false" COMMENT="Data de nascimento do usuário no formato YYY-MM-DD"/>
+                <FIELD NAME="studentbirthdate" TYPE="datetime" NOTNULL="true" SEQUENCE="false" COMMENT="Data de nascimento do usuário no formato YYY-MM-DD"/>
             </FIELDS>
             <KEYS>
-                <KEY NAME="primary" FIELDS="id"/>
+                <KEY NAME="primary" FIELDS="id" TYPE="primary"/>
             </KEYS>
         </TABLE>
-        <TABLE NAME="gcplugin_school">
+        <TABLE NAME="gcplugin_school" COMMENT="informações de uma escola parceira">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
                 <FIELD NAME="schoolname" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Nome da escola parceira"/>
                 <FIELD NAME="cnpj" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="CNPJ da escola parceira"/>
-                <FIELD NAME="expires_in" TYPE="date" NOTNULL="true" SEQUENCE="false" COMMENT="Data de validade do contrato no formato YYY-MM-DD"/>
+                <FIELD NAME="expires_in" TYPE="datetime" NOTNULL="true" SEQUENCE="false" COMMENT="Data de validade do contrato no formato YYY-MM-DD"/>
             </FIELDS>
             <KEYS>
-                <KEY NAME="primary" FIELDS="id"/>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
             </KEYS>
         </TABLE>
-        <TABLE NAME="gcplugin_schoolyear">
+        <TABLE NAME="gcplugin_schoolyear" COMMENT="informações de um ano letivo">
         <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
                 <FIELD NAME="desc" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Descrição do ano letivo"/>
             </FIELDS>
             <KEYS>
-                <KEY NAME="primary" FIELDS="id"/>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
             </KEYS>
         </TABLE>
     </TABLES>
