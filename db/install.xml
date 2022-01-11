@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/gcplugin/db" VERSION="20220110" COMMENT="arquivo XMLDB para o plugin de cadastro GC da CODE8734 local/gcplugin"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="local_gcplugin" COMMENT="plugin de cadastro GC da CODE8734">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="gcplugin_student">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="studentname" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Nome completo"/>
+                <FIELD NAME="schoolyear" TYPE="int" LENGTH="2" NOTNULL="true" SEQUENCE="false" COMMENT="Ano escolar"/>
+                <FIELD NAME="studentemail" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="E-mail pessoal do usuário"/>
+                <FIELD NAME="studentphonenumber" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Número de telefone para contato"/>
+                <FIELD NAME="cnpj" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="CNPJ da escola parceira"/>
+                <FIELD NAME="studentbirthdate" TYPE="date" NOTNULL="true" SEQUENCE="false" COMMENT="Data de nascimento do usuário no formato YYY-MM-DD"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="gcplugin_school">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="schoolname" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Nome da escola parceira"/>
+                <FIELD NAME="cnpj" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="CNPJ da escola parceira"/>
+                <FIELD NAME="expires_in" TYPE="date" NOTNULL="true" SEQUENCE="false" COMMENT="Data de validade do contrato no formato YYY-MM-DD"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="gcplugin_schoolyear">
+        <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="desc" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Descrição do ano letivo"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
